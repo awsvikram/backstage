@@ -24,6 +24,8 @@ RUN --mount=type=cache,target=/var/cache/apt,sharing=locked \
 USER node
 WORKDIR /app
 
+# adding comment
+
 COPY --from=packages --chown=node:node /app .
 
 # Stop cypress from downloading it's massive binary.
